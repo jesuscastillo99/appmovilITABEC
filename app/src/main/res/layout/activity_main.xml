@@ -29,6 +29,7 @@
                 android:id="@+id/et_buscar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#FF0000"
                 android:hint="Buscar" />
         </com.google.android.material.textfield.TextInputLayout>
 
