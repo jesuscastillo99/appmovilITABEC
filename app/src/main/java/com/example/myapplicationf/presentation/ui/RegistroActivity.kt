@@ -7,19 +7,19 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.myapplicationf.R
-import com.example.myapplicationf.databinding.ActivityLoginBinding
+import com.example.myapplicationf.databinding.ActivityRegistroBinding
 
-class LoginActivity : AppCompatActivity() {
+class RegistroActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityLoginBinding
+    private lateinit var binding: ActivityRegistroBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityLoginBinding.inflate(layoutInflater)
+        enableEdgeToEdge()
+        binding = ActivityRegistroBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        binding.btnRegi.setOnClickListener {
-            val intent = Intent(this, RegistroActivity::class.java)
+        binding.btnIni.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
     }

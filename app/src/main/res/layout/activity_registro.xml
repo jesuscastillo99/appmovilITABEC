@@ -5,15 +5,16 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.ui.LoginActivity"
-    android:background="@drawable/backitabec">
+    android:background="@drawable/backitabec"
+    tools:context=".presentation.ui.RegistroActivity">
+
 
     <TextView
         android:id="@+id/txtregi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="Inicio de sesión"
+        android:text="Registro"
         android:textColor="#AB0033"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -70,12 +71,12 @@
         app:layout_constraintTop_toBottomOf="@+id/txtcontra" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnIniciarSesion"
+        android:id="@+id/btnRegistrarse"
         style="@style/Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="Iniciar sesión"
+        android:text="REGISTRARSE"
         android:textColor="#FFFFFF"
         app:backgroundTint="#ab0033"
         app:cornerRadius="16dp"
@@ -86,12 +87,12 @@
         app:strokeColor="#FFFFFF" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnRegi"
+        android:id="@+id/btnIni"
         style="@style/Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:text="REGISTRARSE"
+        android:text="INICIAR SESION"
         android:textColor="#FFFFFF"
         app:backgroundTint="#bc955c"
         app:cornerRadius="16dp"
@@ -105,12 +106,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:text="¿No tienes cuenta? Regístrate"
+        android:text="¿Ya tienes cuenta? Inicia sesion"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnIniciarSesion" />
-
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrarse" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
