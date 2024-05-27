@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backitabec"
-    tools:context=".presentation.ui.RegistroActivity">
+    tools:context=".presentation.ui.RecuperarActivity">
 
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="Registro"
+        android:text="Recuperar contraseña"
         android:textColor="#AB0033"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="44dp"
-        android:text="Contraseña:"
+        android:text="Curp:"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +65,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
         android:ems="10"
-        android:hint="Ingresa tu contraseña"
+        android:hint="Ingresa tu curp"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtcontra" />
@@ -76,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="REGISTRARSE"
+        android:text="RECUPERAR"
         android:textColor="#FFFFFF"
         app:backgroundTint="#ab0033"
         app:cornerRadius="16dp"

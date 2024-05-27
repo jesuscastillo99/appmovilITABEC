@@ -2,11 +2,7 @@ package com.example.myapplicationf.presentation.ui
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.myapplicationf.R
 import com.example.myapplicationf.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -19,7 +15,11 @@ class LoginActivity : AppCompatActivity() {
 
 
         binding.btnRegi.setOnClickListener {
-            val intent = Intent(this, RegistroActivity::class.java)
+            val intent = Intent(this, RecuperarActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnIniciarSesion.setOnClickListener {
+            val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
         }
     }

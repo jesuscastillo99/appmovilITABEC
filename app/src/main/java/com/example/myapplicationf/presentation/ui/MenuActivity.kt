@@ -7,20 +7,16 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.myapplicationf.R
-import com.example.myapplicationf.databinding.ActivityRegistroBinding
+import com.example.myapplicationf.databinding.ActivityLoginBinding
+import com.example.myapplicationf.databinding.ActivityMenuBinding
 
-class RegistroActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityRegistroBinding
+class MenuActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMenuBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        binding = ActivityRegistroBinding.inflate(layoutInflater)
+        binding = ActivityMenuBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnIni.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-        }
+
     }
 }

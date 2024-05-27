@@ -16,10 +16,10 @@
         android:theme="@style/Theme.MyApplicationf"
         tools:targetApi="31">
         <activity
-            android:name=".MenuActivity"
+            android:name=".presentation.ui.MenuActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.ui.RegistroActivity"
+            android:name=".presentation.ui.RecuperarActivity"
             android:exported="false" />
         <activity
             android:name=".presentation.ui.SplashScreenActivity"
