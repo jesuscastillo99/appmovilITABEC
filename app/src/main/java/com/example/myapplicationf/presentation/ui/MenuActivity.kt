@@ -17,6 +17,26 @@ class MenuActivity : AppCompatActivity() {
         binding = ActivityMenuBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnEstado.setOnClickListener {
+            val intent = Intent(this, EstadosActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnMensaje.setOnClickListener {
+            val intent = Intent(this, MensajesActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnPagos.setOnClickListener {
+            val intent = Intent(this,PagosActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnRenov.setOnClickListener {
+            val intent = Intent(this, RenovacionActivity::class.java)
+            startActivity(intent)
+        }
+
 
     }
 }

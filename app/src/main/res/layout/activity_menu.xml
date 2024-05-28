@@ -13,58 +13,125 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="348dp"
-            android:layout_height="63dp"
-            android:layout_marginTop="292dp"
-            android:backgroundTint="#ab0033"
-            android:text="ESTADO DE CUENTA"
-            android:textSize="20sp"
-            android:textStyle="bold"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnlogout"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="64dp"
+            android:padding="16dp"
+            android:textColor="@android:color/white"
+            app:backgroundTint="#ab0033"
+            app:cornerRadius="8dp"
+            app:icon="@drawable/logoutw"
+            app:iconSize="26dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.955"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/button2"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEstado"
+            android:layout_width="348dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="108dp"
+            android:text="ESTADO DE CUENTA"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:backgroundTint="#ab0033"
+            app:cornerRadius="8dp"
+            app:icon="@drawable/estadodecuenta"
+            app:iconPadding="8dp"
+            app:iconSize="26dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMensaje"
             android:layout_width="348dp"
             android:layout_height="63dp"
             android:layout_marginTop="20dp"
-            android:backgroundTint="#AB0033"
+            app:backgroundTint="#AB0033"
             android:text="MENSAJES"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button" />
+            app:layout_constraintTop_toBottomOf="@+id/btnEstado"
+            android:textColor="@android:color/white"
+            app:icon="@drawable/mensajes"
+            app:iconSize="26dp"
+            app:iconPadding="1dp"
+            app:cornerRadius="8dp"
+            app:strokeWidth="2dp"
+            app:strokeColor="@android:color/white" />
 
-        <Button
-            android:id="@+id/button3"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPagos"
             android:layout_width="348dp"
             android:layout_height="63dp"
             android:layout_marginTop="20dp"
-            android:backgroundTint="#AB0033"
+            app:backgroundTint="#AB0033"
             android:text="PAGOS"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button2" />
+            app:layout_constraintTop_toBottomOf="@+id/btnMensaje"
+            android:textColor="@android:color/white"
+            app:icon="@drawable/pagos"
+            app:iconSize="26dp"
+            app:iconPadding="1dp"
+            app:cornerRadius="8dp"
+            app:strokeWidth="2dp"
+            app:strokeColor="@android:color/white" />
 
-        <Button
-            android:id="@+id/button4"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRenov"
             android:layout_width="348dp"
             android:layout_height="63dp"
             android:layout_marginTop="20dp"
-            android:backgroundTint="#AB0033"
+            app:backgroundTint="#AB0033"
             android:text="RENOVACIÓN"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button3" />
+            app:layout_constraintTop_toBottomOf="@+id/btnPagos"
+            android:textColor="@android:color/white"
+            app:icon="@drawable/renovacion"
+            app:iconSize="26dp"
+            app:iconPadding="1dp"
+            app:cornerRadius="8dp"
+            app:strokeWidth="2dp"
+            app:strokeColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="16dp"
+            android:text="Usuario:"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnlogout" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="128dp"
+            android:text="user"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.158"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
