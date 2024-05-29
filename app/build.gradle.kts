@@ -38,9 +38,19 @@ android {
     }
 }
 
-dependencies {
 
+
+dependencies {
+    //NavComponent
+    val navVersion = "2.7.0"
+    implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
+    implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
+    //Lottieanimation
     implementation ("com.airbnb.android:lottie:6.4.0")
+    //Para manipular json
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.9.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
