@@ -44,7 +44,8 @@ class LoginActivity : AppCompatActivity() {
                         val user = response.body()
                         if (user != null) {
                             val userName = user.completo
-                            saveUserName(userName)
+                            val userId = user.idpersona
+                            saveUserName(userName, userId)
                             Toast.makeText(this@LoginActivity, "Bienvenido $userName", Toast.LENGTH_SHORT).show()
 
                             val intent = Intent(this@LoginActivity, MenuActivity::class.java)
@@ -68,10 +69,11 @@ class LoginActivity : AppCompatActivity() {
             })
     }
 
-    private fun saveUserName(userName: String) {
+    private fun saveUserName(userName: String, idPersona: Int) {
         val sharedPreferences = getSharedPreferences("USER_PREF", MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.putString("USER_NAME", userName)
+        editor.putInt("USER_ID", idPersona)
         editor.apply()
     }
 

@@ -53,3 +53,16 @@ object RetrofitClient {
         }
     }
 }
+
+object RetrofitClient2 {
+    private const val BASE_URL = "https://sistemasiceet.tamaulipas.gob.mx/wsjc/"
+
+    val instance: ApiService2 by lazy {
+        val retrofit = Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        retrofit.create(ApiService2::class.java)
+    }
+}
