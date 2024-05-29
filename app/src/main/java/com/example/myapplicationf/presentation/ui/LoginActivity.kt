@@ -42,23 +42,37 @@ class LoginActivity : AppCompatActivity() {
                 override fun onResponse(call: Call<UserResponse>, response: Response<UserResponse>) {
                     if (response.isSuccessful && response.body() != null) {
                         val user = response.body()
-                        Toast.makeText(this@LoginActivity, "Bienvenido ${user?.completo}", Toast.LENGTH_SHORT).show()
-                        val intent = Intent(this@LoginActivity, MenuActivity::class.java)
-                        startActivity(intent)
-                        finish()
+                        if (user != null) {
+                            val userName = user.completo
+                            saveUserName(userName)
+                            Toast.makeText(this@LoginActivity, "Bienvenido $userName", Toast.LENGTH_SHORT).show()
+
+                            val intent = Intent(this@LoginActivity, MenuActivity::class.java)
+                            startActivity(intent)
+                            finish()
+                        } else {
+                            Toast.makeText(this@LoginActivity, "Datos incorrectos o usuario no encontrado", Toast.LENGTH_SHORT).show()
+                        }
                     } else {
-                        // Manejar errores HTTP aquí (como credenciales incorrectas)
                         when (response.code()) {
                             401 -> Toast.makeText(this@LoginActivity, "Datos incorrectos", Toast.LENGTH_SHORT).show()
-                            else -> Toast.makeText(this@LoginActivity, "Error: ${response.message()}", Toast.LENGTH_SHORT).show()
+                            else -> Toast.makeText(this@LoginActivity, "Error: ${response.code()} ${response.message()}", Toast.LENGTH_SHORT).show()
                         }
                     }
                 }
 
                 override fun onFailure(call: Call<UserResponse>, t: Throwable) {
+                    t.printStackTrace()
                     Toast.makeText(this@LoginActivity, "Error de red: ${t.message}", Toast.LENGTH_SHORT).show()
                 }
             })
+    }
+
+    private fun saveUserName(userName: String) {
+        val sharedPreferences = getSharedPreferences("USER_PREF", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putString("USER_NAME", userName)
+        editor.apply()
     }
 
 
