@@ -7,6 +7,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import java.security.cert.CertificateException
 import javax.net.ssl.HostnameVerifier
 import javax.net.ssl.SSLContext
+import com.google.gson.GsonBuilder
 import javax.net.ssl.SSLSocketFactory
 import javax.net.ssl.TrustManager
 import javax.net.ssl.X509TrustManager
@@ -57,12 +58,50 @@ object RetrofitClient {
 object RetrofitClient2 {
     private const val BASE_URL = "https://sistemasiceet.tamaulipas.gob.mx/wsjc/"
 
+    private val loggingInterceptor = HttpLoggingInterceptor().apply {
+        level = HttpLoggingInterceptor.Level.BODY
+    }
+
+    private val httpClient = OkHttpClient.Builder()
+        .addInterceptor(loggingInterceptor)
+        .sslSocketFactory(getUnsafeSSLSocketFactory(), getUnsafeTrustManager())
+        .hostnameVerifier { _, _ -> true }
+        .build()
+
+    // Configuración de Gson para ser indulgente
+    private val gson = GsonBuilder()
+        .setLenient()
+        .create()
+
     val instance: ApiService2 by lazy {
         val retrofit = Retrofit.Builder()
             .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(gson))
+            .client(RetrofitClient2.httpClient)
             .build()
 
         retrofit.create(ApiService2::class.java)
     }
+
+    private fun getUnsafeSSLSocketFactory(): SSLSocketFactory {
+        val trustAllCerts = arrayOf<TrustManager>(object : X509TrustManager {
+            override fun checkClientTrusted(chain: Array<java.security.cert.X509Certificate>, authType: String) {}
+            override fun checkServerTrusted(chain: Array<java.security.cert.X509Certificate>, authType: String) {}
+            override fun getAcceptedIssuers(): Array<java.security.cert.X509Certificate> = arrayOf()
+        })
+
+        val sslContext = SSLContext.getInstance("SSL")
+        sslContext.init(null, trustAllCerts, java.security.SecureRandom())
+        return sslContext.socketFactory
+    }
+
+    private fun getUnsafeTrustManager(): X509TrustManager {
+        return object : X509TrustManager {
+            override fun checkClientTrusted(chain: Array<java.security.cert.X509Certificate>, authType: String) {}
+            override fun checkServerTrusted(chain: Array<java.security.cert.X509Certificate>, authType: String) {}
+            override fun getAcceptedIssuers(): Array<java.security.cert.X509Certificate> = arrayOf()
+        }
+    }
+
+
 }

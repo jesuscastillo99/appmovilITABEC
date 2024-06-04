@@ -32,7 +32,7 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnEstado"
             android:layout_width="348dp"
-            android:layout_height="63dp"
+            android:layout_height="80dp"
             android:layout_marginTop="48dp"
             android:text="ESTADO DE CUENTA"
             android:textColor="@android:color/white"
@@ -51,7 +51,7 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnMensaje"
             android:layout_width="348dp"
-            android:layout_height="63dp"
+            android:layout_height="80dp"
             android:layout_marginTop="20dp"
             app:backgroundTint="#AB0033"
             android:text="MENSAJES"
@@ -71,7 +71,7 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnPagos"
             android:layout_width="348dp"
-            android:layout_height="63dp"
+            android:layout_height="80dp"
             android:layout_marginTop="20dp"
             app:backgroundTint="#AB0033"
             android:text="PAGOS"
@@ -91,7 +91,7 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnRenov"
             android:layout_width="348dp"
-            android:layout_height="63dp"
+            android:layout_height="80dp"
             android:layout_marginTop="20dp"
             app:backgroundTint="#AB0033"
             android:text="RENOVACIÓN"

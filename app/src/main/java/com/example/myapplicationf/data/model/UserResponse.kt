@@ -4,17 +4,20 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 
+
 data class UserResponse(
-    val idpersona: Int,
+    val idpersona: String,
     val completo: String,
     val curp: String
 )
-
+data class EstadosDeCuentaResponse(
+    val estados: List<EstadoDeCuenta>
+)
 data class EstadoDeCuenta(
-    val id: Int,
+    val Id: Int,
     val fechavencimiento: String,
     val monto: Double,
-    val saldo: Double,
+    val Saldo: Double,
     val estatus: String
 )
 
@@ -28,5 +31,5 @@ interface ApiService {
 
 interface ApiService2 {
     @GET("credito.php")
-    fun getEstadosDeCuenta(@Query("edocta") idPersona: Int): Call<List<EstadoDeCuenta>>
+    fun getEstadosDeCuenta(@Query("edocta") idPersona: Int): Call<EstadoDeCuentaModelo>
 }

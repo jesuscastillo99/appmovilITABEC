@@ -2,12 +2,7 @@ package com.example.myapplicationf.presentation.ui
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.myapplicationf.R
-import com.example.myapplicationf.databinding.ActivityLoginBinding
 import com.example.myapplicationf.databinding.ActivityMenuBinding
 
 class MenuActivity : AppCompatActivity() {
@@ -32,7 +27,7 @@ class MenuActivity : AppCompatActivity() {
         }
 
         binding.btnPagos.setOnClickListener {
-            val intent = Intent(this,PagosActivity::class.java)
+            val intent = Intent(this, PagosActivity::class.java)
             startActivity(intent)
         }
 

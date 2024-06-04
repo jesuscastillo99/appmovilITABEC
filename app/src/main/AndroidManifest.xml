@@ -16,6 +16,9 @@
         android:theme="@style/Theme.MyApplicationf"
         tools:targetApi="31">
         <activity
+            android:name=".presentation.ui.PagosActivity"
+            android:exported="false" />
+        <activity
             android:name=".ItemEstadoDeCuentaActivity"
             android:exported="false" />
         <activity
