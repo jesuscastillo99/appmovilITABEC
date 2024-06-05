@@ -28,7 +28,7 @@ class EstadosActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityEstadosBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        binding.progressBar.visibility = View.VISIBLE
         binding.rvLista.layoutManager = LinearLayoutManager(this)
 
         cargarDatos(getUserId())

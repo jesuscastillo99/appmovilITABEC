@@ -23,18 +23,13 @@ class EstadoCuentaAdapter(private val listaEstados: List<EstadoDeCuentaModelo>) 
         if (position % 2 == 0) {
             holder.binding.cardView.setCardBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.white))
         } else {
-            holder.binding.txtid.setTextColor(ContextCompat.getColor(holder.itemView.context, android.R.color.white))
-            holder.binding.txtfec.setTextColor(ContextCompat.getColor(holder.itemView.context, android.R.color.white))
-            holder.binding.txtmon.setTextColor(ContextCompat.getColor(holder.itemView.context, android.R.color.white))
-            holder.binding.txtsal.setTextColor(ContextCompat.getColor(holder.itemView.context, android.R.color.white))
-            holder.binding.txtest.setTextColor(ContextCompat.getColor(holder.itemView.context, android.R.color.white))
             holder.binding.tvId.setTextColor(ContextCompat.getColor(holder.itemView.context, android.R.color.white))
             holder.binding.fechaVencimiento.setTextColor(ContextCompat.getColor(holder.itemView.context, android.R.color.white))
             holder.binding.monto.setTextColor(ContextCompat.getColor(holder.itemView.context, android.R.color.white))
             holder.binding.saldo.setTextColor(ContextCompat.getColor(holder.itemView.context, android.R.color.white))
             holder.binding.estatus.setTextColor(ContextCompat.getColor(holder.itemView.context, android.R.color.white))
-            holder.binding.fondo1.setBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.itabec))
-            holder.binding.cardView.setCardBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.itabec))
+            holder.binding.fondo1.setBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.itabec2))
+            holder.binding.cardView.setCardBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.itabec2))
         }
     }
 

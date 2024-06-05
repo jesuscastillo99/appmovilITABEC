@@ -6,157 +6,71 @@
     android:layout_height="wrap_content"
     android:background="@color/semi_transparent_gray"
     android:orientation="horizontal"
-    android:padding="16dp">
+    android:padding="0dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="397dp"
-        android:layout_height="172dp"
-        android:layout_margin="16dp"
-        app:cardElevation="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        app:cardElevation="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/fondo1"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:padding="16dp">
-
-            <TextView
-                android:id="@+id/txtid"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="8dp"
-                android:paddingLeft="15dp"
-                android:text="ID"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.065" />
-
-            <TextView
-                android:id="@+id/txtfec"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="16dp"
-                android:text="FechaVencimiento"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/txtid"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/txtmon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:paddingBottom="4dp"
-                android:text="Monto"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/txtfec"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/txtsal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:paddingBottom="4dp"
-                android:text="Saldo"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/txtmon"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/txtest"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="16dp"
-                android:paddingRight="0dp"
-                android:paddingBottom="4dp"
-                android:text="Estatus"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/txtsal"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tvId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="18dp"
+                android:layout_marginStart="4dp"
                 android:text="idd"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtid"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/fechaVencimiento"
                 android:layout_width="118dp"
-                android:layout_height="21dp"
-                android:layout_margin="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
                 android:gravity="center"
                 android:paddingRight="0dp"
                 android:text="fechaddd"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tvId"
-                app:layout_constraintTop_toBottomOf="@+id/txtfec"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/monto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_marginStart="4dp"
-                android:paddingLeft="5dp"
+                android:layout_marginStart="36dp"
                 android:text="montod"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/fechaVencimiento"
-                app:layout_constraintTop_toBottomOf="@+id/txtmon"
-                app:layout_constraintVertical_bias="0.043" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/saldo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_marginStart="12dp"
-                android:paddingLeft="7dp"
+                android:layout_marginStart="20dp"
                 android:text="saldod"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/monto"
-                app:layout_constraintTop_toBottomOf="@+id/txtsal"
-                app:layout_constraintVertical_bias="0.043" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/estatus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="20dp"
                 android:paddingRight="0dp"
                 android:text="estatusd"
                 android:textSize="13sp"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/saldo"
-                app:layout_constraintTop_toBottomOf="@+id/txtest"
-                app:layout_constraintVertical_bias="0.038" />
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
