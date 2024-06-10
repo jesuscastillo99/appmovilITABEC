@@ -43,8 +43,8 @@ class EstadoCuentaAdapter(private val listaEstados: List<EstadoDeCuentaModelo>) 
             binding.apply {
                 tvId.text = estado.Id.toString()
                 fechaVencimiento.text = estado.fechavencimiento
-                monto.text = estado.monto.toString()
-                saldo.text = estado.Saldo.toString()
+                monto.text = String.format("$%.2f", estado.monto) // Formatear con el símbolo "$"
+                saldo.text = String.format("$%.2f", estado.Saldo)
                 estatus.text = estado.estatus
             }
         }
