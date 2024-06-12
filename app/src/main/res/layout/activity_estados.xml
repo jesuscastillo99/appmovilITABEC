@@ -17,7 +17,7 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_lista"
+            android:id="@+id/rvLista"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="84dp"
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="288dp"
             android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="@+id/rv_lista"
+            app:layout_constraintBottom_toBottomOf="@+id/rvLista"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
