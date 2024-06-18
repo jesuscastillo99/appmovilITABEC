@@ -1,5 +1,6 @@
 package com.example.myapplicationf.presentation.ui
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +8,16 @@ import com.example.myapplicationf.databinding.ActivityMenuBinding
 
 class MenuActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMenuBinding
+
+    companion object {
+        private const val PREF_NAME = "USER_PREF"
+        private const val USER_NAME_KEY = "USER_NAME"
+
+        fun getUserName(context: Context): String? {
+            val sharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
+            return sharedPreferences.getString(USER_NAME_KEY, null)
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +52,7 @@ class MenuActivity : AppCompatActivity() {
         }
 
     }
-    private fun getUserName(): String? {
+     fun getUserName(): String? {
         val sharedPreferences = getSharedPreferences("USER_PREF", MODE_PRIVATE)
         return sharedPreferences.getString("USER_NAME", null)
     }
