@@ -21,14 +21,14 @@ class MensajeAdapter(private val context: Context, private val listaMensajes: Li
     override fun onBindViewHolder(holder: MensajeViewHolder, position: Int) {
         val mensaje = listaMensajes[position]
         holder.bind(mensaje)
-        // Alternar colores
-        if (position % 2 == 0) {
-            holder.binding.fondo1.setBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.itabec))
-            holder.binding.cardView.setCardBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.itabec3))
-        } else {
-            holder.binding.fondo1.setBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.itabec2))
-            holder.binding.cardView.setCardBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.itabec2))
-        }
+//        // Alternar colores
+//        if (position % 2 == 0) {
+//            holder.binding.fondo1.setBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.itabec))
+//            holder.binding.cardView.setCardBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.itabec3))
+//        } else {
+//            holder.binding.fondo2.setBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.itabec2))
+//            holder.binding.cardView2.setCardBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.itabec2))
+//        }
 
     }
 
