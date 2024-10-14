@@ -19,7 +19,7 @@
             android:name=".presentation.ui.PagosActivity"
             android:exported="false" />
         <activity
-            android:name=".ItemEstadoDeCuentaActivity"
+            android:name="ItemEstadoDeCuentaActivity"
             android:exported="false" />
         <activity
             android:name=".presentation.ui.RenovacionActivity"
@@ -28,7 +28,9 @@
             android:name=".presentation.ui.PagosActivity"
             android:exported="false" />
         <activity
+            android:windowSoftInputMode="adjustResize"
             android:name=".presentation.ui.MensajesActivity"
+
             android:exported="false" />
         <activity
             android:name=".presentation.ui.EstadosActivity"

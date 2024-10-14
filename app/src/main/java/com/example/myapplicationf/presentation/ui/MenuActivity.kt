@@ -3,6 +3,7 @@ package com.example.myapplicationf.presentation.ui
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplicationf.databinding.ActivityMenuBinding
 
@@ -37,6 +38,11 @@ class MenuActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // Ocultar los botones btnPagos y btnRenov
+        binding.btnPagos.visibility = View.GONE
+        binding.btnRenov.visibility = View.GONE
+
+       /* ELIMINAR LINEAS DE CODIGO CUANDO YA SE USEN LOS BOTONES
         binding.btnPagos.setOnClickListener {
             val intent = Intent(this, PagosActivity::class.java)
             startActivity(intent)
@@ -46,7 +52,7 @@ class MenuActivity : AppCompatActivity() {
             val intent = Intent(this, RenovacionActivity::class.java)
             startActivity(intent)
         }
-
+*/
         binding.btnlogout.setOnClickListener {
             logout()
         }
