@@ -6,4 +6,9 @@
     <color name="itabec">#ab0033</color>
     <color name="itabec2">#bc955c</color>
     <color name="itabec3">#CDAB0033</color>
+    <color name="itabec4">#9C010A</color>
+    <color name="transparente">#00000000</color>
+    <color name="black1">#000000</color>
+    <color name="crema">#ddc9a3</color>
+    <color name="gris">#54565a</color>
 </resources>

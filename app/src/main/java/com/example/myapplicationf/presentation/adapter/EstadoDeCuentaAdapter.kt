@@ -21,15 +21,23 @@ class EstadoCuentaAdapter(private val listaEstados: List<EstadoDeCuentaModelo>) 
         holder.bind(estado)
         // Alternar colores
         if (position % 2 == 0) {
+            // Establecer colores para posición par
             holder.binding.cardView.setCardBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.white))
+            holder.binding.tvId.setTextColor(ContextCompat.getColor(holder.itemView.context, R.color.black))
+            holder.binding.fechaVencimiento.setTextColor(ContextCompat.getColor(holder.itemView.context, R.color.black))
+            holder.binding.monto.setTextColor(ContextCompat.getColor(holder.itemView.context, R.color.black))
+            holder.binding.saldo.setTextColor(ContextCompat.getColor(holder.itemView.context, R.color.black))
+            holder.binding.estatus.setTextColor(ContextCompat.getColor(holder.itemView.context, R.color.black))
+            holder.binding.fondo1.setBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.white))
         } else {
+            // Establecer colores para posición impar
+            holder.binding.cardView.setCardBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.itabec2))
             holder.binding.tvId.setTextColor(ContextCompat.getColor(holder.itemView.context, android.R.color.white))
             holder.binding.fechaVencimiento.setTextColor(ContextCompat.getColor(holder.itemView.context, android.R.color.white))
             holder.binding.monto.setTextColor(ContextCompat.getColor(holder.itemView.context, android.R.color.white))
             holder.binding.saldo.setTextColor(ContextCompat.getColor(holder.itemView.context, android.R.color.white))
             holder.binding.estatus.setTextColor(ContextCompat.getColor(holder.itemView.context, android.R.color.white))
             holder.binding.fondo1.setBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.itabec2))
-            holder.binding.cardView.setCardBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.itabec2))
         }
     }
 

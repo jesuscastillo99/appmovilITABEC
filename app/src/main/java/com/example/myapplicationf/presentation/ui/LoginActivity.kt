@@ -5,19 +5,14 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.android.volley.RequestQueue
 import com.android.volley.toolbox.HurlStack
-import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import com.example.myapplicationf.R
 import com.example.myapplicationf.databinding.ActivityLoginBinding
-import com.example.myapplicationf.data.model.RetrofitClient
-import com.example.myapplicationf.data.model.UserResponse
+
 import com.example.myapplicationf.presentation.adapter.NoSSLVerificationSocketFactory
-import okhttp3.Request
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
+
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
@@ -27,10 +22,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.edtCorreo.setText(setCorreo())
 
-        binding.btnRegi.setOnClickListener {
-            val intent = Intent(this, RecuperarActivity::class.java)
-            startActivity(intent)
-        }
+
         binding.btnIniciarSesion.setOnClickListener {
             val email = binding.edtCorreo.text.toString().trim()
             val password = binding.edtContra.text.toString().trim()
@@ -40,6 +32,16 @@ class LoginActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Por favor, ingrese todos los campos", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        binding.btnRecu.setOnClickListener {
+            // Crear un Intent para iniciar RecuperarActivity
+            val intent = Intent(this, RecuperarActivity::class.java)
+
+            // Iniciar la nueva actividad
+            startActivity(intent)
+            // Aplica las animaciones de entrada y salida
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
     }
